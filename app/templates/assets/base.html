@@ -1,0 +1,56 @@
+{% from "macros/alerts.html" import error, alert %}
+
+<!doctype html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Personal Dictionary and Word Memorizing APP">
+    <meta name="author" content="Yunus Emre Geldegül">
+
+    <title>
+        {% if title %}
+            {{ title }} - Garfield
+        {% else %}
+            Garfield
+        {% endif %}
+    </title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/sticky-footer-navbar/">
+    <!-- Bootstrap core CSS -->
+    <link href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="https://getbootstrap.com/docs/4.0/examples/sticky-footer-navbar/sticky-footer-navbar.css" rel="stylesheet">
+
+    {% block css %}
+
+    {% endblock %}
+</head>
+<body>
+{% include 'assets/header.html' %}
+
+<main role="main" class="container">
+    {% block content %}
+        <h1 class="mt-5">Header</h1>
+        <p class="lead">Content</p>
+        <p>Sub Content</p>
+    {% endblock %}
+</main>
+
+{% include 'assets/footer.html' %}
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script>
+    window.jQuery || document.write(
+        '<script src="https://getbootstrap.com/docs/4.0/assets/js/vendor/jquery-slim.min.js"><\/script>'
+    )
+</script>
+<script src="https://getbootstrap.com/docs/4.0/assets/js/vendor/popper.min.js"></script>
+<script src="https://getbootstrap.com/docs/4.0/dist/js/bootstrap.min.js"></script>
+
+{% block js %}
+
+{% endblock %}
+</body>
+</html>
