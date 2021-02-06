@@ -13,3 +13,5 @@ class Config():
     ENV = getenv('ENV') or 'production'
     SQLALCHEMY_DATABASE_URI = getenv('SQLALCHEMY_DATABASE_URI') or 'sqlite:///' + path.join(basedir, 'garfield.db')
     SQLALCHEMY_TRACK_MODIFICATIONS = False
+    X_RAPIDAPI_KEY = getenv('X-RAPIDAPI-KEY')
+    X_RAPIDAPI_HOST = getenv('X-RAPIDAPI-HOST')
