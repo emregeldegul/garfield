@@ -5,8 +5,8 @@ from json import loads, dumps
 from app import create_app
 from app import db
 
-from app.models.user import User
 from app.models.word import Word
+from app.models.user import User
 
 app = create_app()
 app.app_context().push()
