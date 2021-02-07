@@ -7,7 +7,7 @@ from app import db
 from app.models.word import Word
 
 
-class ApiService():
+class ApiService:
     def __init__(self):
         self.url = "https://wordsapiv1.p.rapidapi.com/words/{}/definitions"
         self.headers = {
@@ -27,6 +27,8 @@ class ApiService():
         word = Word.query.filter_by(word=value).first()
 
         if word:
+            word.power += 1
+            db.session.commit()
             return {'success': True, 'model': word}
 
         response = self.request(value)

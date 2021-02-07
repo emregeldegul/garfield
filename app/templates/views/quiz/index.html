@@ -1,0 +1,36 @@
+{% extends 'assets/base.html' %}
+
+{% block content %}
+    <h1 class="mt-5">{{ title }}</h1>
+
+    {% if session['start'] %}
+        <hr>
+            <a href="{{ url_for('quiz.question') }}">Start A  Quiz</a>
+        <hr>
+    {% else %}
+        <hr>
+            To start the course you need to load at least 10 words.
+        <hr>
+    {% endif %}
+
+    {{ alert() }}
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Date</th>
+            <th scope="col">Point</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for exam in exams %}
+            <tr>
+                <td>{{ exam.id }}</td>
+                <td>{{ exam.created_at }}</td>
+                <td>{{ exam.point }}</td>
+            </tr>
+        {% endfor %}
+
+        </tbody>
+    </table>
+{% endblock %}
