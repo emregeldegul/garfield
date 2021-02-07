@@ -28,6 +28,10 @@ Note Two: Please check the "screenshots" folder for images.
 * [flask-wtf] - Simple integration of Flask and WTForms, including CSRF, file upload, and reCAPTCHA.
 * [bootstrap] -  For fast and responsive front-end design.
 
+# DB Schema
+
+![DB Schema](garfield_db_schema.png)
+
 
 [flask]: <http://flask.pocoo.org>
 [flask-sqlalchemy]: <https://flask-sqlalchemy.palletsprojects.com/en/2.x>
